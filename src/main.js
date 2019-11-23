@@ -30,8 +30,8 @@ $(document).ready(function() {
         console.log(response.data);
         let firstName = response.data[i].profile.first_name;
         let lastName = response.data[i].profile.last_name;
-        $('#output').append(`<p>${firstName} ${lastName}</p>`);
-        // let name = response.data[i].practices[0].name;
+        let name = response.data[i].practices[0].name;
+        $('#output').append(`<div> <h6>${firstName} ${lastName}</h6> <p>${name}</p> </div>`);
         // let street = response.data[i].practices[0].visit_address.street;
         // let street2 = response.data[i].practices[0].visit_address.street2;
         // let city = response.data[i].practices[0].visit_address.city;
@@ -40,7 +40,7 @@ $(document).ready(function() {
         // let number = response.data[i].practices[0].phones[1];
         // let website = response.data[i].practices[0].website;
         // let acceptsNewPatients = response.data[i].practices[0].accepts_new_patients;
-        // $('.name').text(`${name}`);
+
         // $('.address').text(`${street}, ${street2} ${city}, ${state} ${zip}`);
         // $('.number').text(`${number}`);
         // $('.website').text(`${website}`);
