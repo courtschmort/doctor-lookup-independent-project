@@ -27,21 +27,19 @@ $(document).ready(function() {
 
       // QUERY BY MEDICAL ISSUE
       for (let i = 0; i < response.data.length; i ++) {
-        console.log(response.data);
         let firstName = response.data[i].profile.first_name;
         let lastName = response.data[i].profile.last_name;
         let name = response.data[i].practices[0].name;
-        $('#output').append(`<div> <h6>${firstName} ${lastName}</h6> <p>${name}</p> </div>`);
-        // let street = response.data[i].practices[0].visit_address.street;
-        // let street2 = response.data[i].practices[0].visit_address.street2;
-        // let city = response.data[i].practices[0].visit_address.city;
-        // let state = response.data[i].practices[0].visit_address.state;
-        // let zip = response.data[i].practices[0].visit_address.zip;
+        let street = response.data[i].practices[0].visit_address.street;
+        let street2 = response.data[i].practices[0].visit_address.street2;
+        let city = response.data[i].practices[0].visit_address.city;
+        let state = response.data[i].practices[0].visit_address.state;
+        let zip = response.data[i].practices[0].visit_address.zip;
+        $('#output').append(`<div> <h6>${firstName} ${lastName}</h6> <p>${name}</p> <p>${street}, ${street2} ${city}, ${state} ${zip}</p> </div> <hr>`);
         // let number = response.data[i].practices[0].phones[1];
         // let website = response.data[i].practices[0].website;
         // let acceptsNewPatients = response.data[i].practices[0].accepts_new_patients;
 
-        // $('.address').text(`${street}, ${street2} ${city}, ${state} ${zip}`);
         // $('.number').text(`${number}`);
         // $('.website').text(`${website}`);
         // if (acceptsNewPatients === true) {
