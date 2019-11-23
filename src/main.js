@@ -36,17 +36,14 @@ $(document).ready(function() {
         let state = response.data[i].practices[0].visit_address.state;
         let zip = response.data[i].practices[0].visit_address.zip;
         let number = response.data[i].practices[0].phones[0].number;
-        $('#output').append(`<div> <h6>${firstName} ${lastName}</h6> <p>${name}</p> <p>${street}, ${street2} ${city}, ${state} ${zip}</p> <a href='tel:${number}'>${number}</a> </div> <hr>`);
-        // let website = response.data[i].practices[0].website;
-        // let acceptsNewPatients = response.data[i].practices[0].accepts_new_patients;
-
-        // $('.number').text(`${number}`);
-        // $('.website').text(`${website}`);
-        // if (acceptsNewPatients === true) {
-        //   $('.accepts-new-patients').text(`${name} is accepting new patients.`);
-        // } else {
-        //   $('.accepts-new-patients').text(`${name} is not accepting new patients.`);
-        // }
+        let acceptsNewPatients = response.data[i].practices[0].accepts_new_patients;
+        let website = response.data[i].practices[0].website;
+        if (acceptsNewPatients === true) {
+          acceptsNewPatients = `${firstName} ${lastName} is accepting new patients.`;
+        } else {
+          acceptsNewPatients = `${firstName} ${lastName} is not accepting new patients.`;
+        }
+        $('#output').append(`<hr> <div> <h6>${firstName} ${lastName}</h6> <p>${name}</p> <p>${street}, ${street2} ${city}, ${state} ${zip}</p> <p><a href='tel:${number}'>${number}</a></p> <p><a href='${website}'>Website</a></p> <p>${acceptsNewPatients}</p> </div>`);
       }
 
     }
