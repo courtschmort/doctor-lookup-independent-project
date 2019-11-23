@@ -1,10 +1,23 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Doctor Lookup</title>
-  </head>
-  <body>
-
-  </body>
+<html lang='en' dir='ltr'>
+<head>
+  <meta charset='utf-8'>
+  <title>Doctor Lookup</title>
+</head>
+<body>
+  <div class='container'>
+    <h1>Doctor Lookup</h1>
+    <form>
+      <div class='form-group'>
+        <label for='medical-issue'>What's your medical issue?</label>
+        <input type='text' class='form-control' id='medical-issue' placeholder='sore throat, rash, etc.'>
+      </div>
+      <button type='submit' class='btn btn-primary'>Submit</button>
+    </form>
+    <div class='output'>
+      <p>There are <span class='doctor-count'></span> doctors that meet your search criteria.</p>
+      <div class='doctor'></div>
+    </div>
+  </div>
+</body>
 </html>
