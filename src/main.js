@@ -35,8 +35,8 @@ $(document).ready(function() {
         let city = response.data[i].practices[0].visit_address.city;
         let state = response.data[i].practices[0].visit_address.state;
         let zip = response.data[i].practices[0].visit_address.zip;
-        $('#output').append(`<div> <h6>${firstName} ${lastName}</h6> <p>${name}</p> <p>${street}, ${street2} ${city}, ${state} ${zip}</p> </div> <hr>`);
-        // let number = response.data[i].practices[0].phones[1];
+        let number = response.data[i].practices[0].phones[0].number;
+        $('#output').append(`<div> <h6>${firstName} ${lastName}</h6> <p>${name}</p> <p>${street}, ${street2} ${city}, ${state} ${zip}</p> <a href='tel:${number}'>${number}</a> </div> <hr>`);
         // let website = response.data[i].practices[0].website;
         // let acceptsNewPatients = response.data[i].practices[0].accepts_new_patients;
 
