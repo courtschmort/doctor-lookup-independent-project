@@ -31,6 +31,24 @@ $(document).ready(function() {
         let firstName = response.data[i].profile.first_name;
         let lastName = response.data[i].profile.last_name;
         $('#output').append(`<p>${firstName} ${lastName}</p>`);
+        // let name = response.data[i].practices[0].name;
+        // let street = response.data[i].practices[0].visit_address.street;
+        // let street2 = response.data[i].practices[0].visit_address.street2;
+        // let city = response.data[i].practices[0].visit_address.city;
+        // let state = response.data[i].practices[0].visit_address.state;
+        // let zip = response.data[i].practices[0].visit_address.zip;
+        // let number = response.data[i].practices[0].phones[1];
+        // let website = response.data[i].practices[0].website;
+        // let acceptsNewPatients = response.data[i].practices[0].accepts_new_patients;
+        // $('.name').text(`${name}`);
+        // $('.address').text(`${street}, ${street2} ${city}, ${state} ${zip}`);
+        // $('.number').text(`${number}`);
+        // $('.website').text(`${website}`);
+        // if (acceptsNewPatients === true) {
+        //   $('.accepts-new-patients').text(`${name} is accepting new patients.`);
+        // } else {
+        //   $('.accepts-new-patients').text(`${name} is not accepting new patients.`);
+        // }
       }
 
     }
