@@ -10,14 +10,14 @@ $(document).ready(function() {
   $('form').submit(function(event) {
     event.preventDefault();
 
-    let medicalIssue = $('#medical-issue').val();
-    $('#medical-issue').val("");
+    let query = $('#query').val();
+    $('#query').val("");
 
     makeApiCall();
 
     async function makeApiCall() {
       let doctorLookup = new DoctorLookup();
-      const response = await doctorLookup.getDoctorByMedicalIssue(medicalIssue);
+      const response = await doctorLookup.getDoctor(query);
       getElements(response);
     }
 
