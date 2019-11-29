@@ -43,7 +43,7 @@ $(document).ready(function() {
         } else {
           acceptsNewPatients = `${firstName} ${lastName} is not accepting new patients.`;
         }
-        $('#output').append(`<hr> <div> <h6>${firstName} ${lastName}</h6> <p>${name}</p> <p>${street}, ${street2} ${city}, ${state} ${zip}</p> <p>☎️ <a href='tel:${number}'>${number}</a></p> <p>ℹ️ <a href='${website}' target='_blank'>Visit website</a></p> <p>${acceptsNewPatients}</p> </div>`);
+        $('#output').append(`<hr> <div> <h6>${firstName} ${lastName}</h6> <p>${name}</p> <p>${street}, ${street2} ${city}, ${state} ${zip}</p> <p>☎️ <a href='tel:${number}'>${number}</a></p> <p>ℹ️ <a href='${website}' target='_blank'>Website</a></p> <p>${acceptsNewPatients}</p> </div>`);
       }
 
     }
