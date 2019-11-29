@@ -11,7 +11,6 @@ $(document).ready(function() {
     event.preventDefault();
 
     let query = $('#query').val();
-    $('#query').val("");
 
     makeApiCall();
 
@@ -22,12 +21,18 @@ $(document).ready(function() {
     }
 
     function getElements(response) {
-      $('#result').show();
-      $('.count').text(response.data.length);
+      let count = response.data.length;
+      if (count === 1) {
+        $('#result').show();
+        $('#results').hide();
+      } else {
+        $('#results').show();
+        $('#result').hide();
+      }
+      $('.count').text(count);
       $('.doctors').empty();
 
-      // QUERY BY MEDICAL ISSUE
-      for (let i = 0; i < response.data.length; i ++) {
+      for (let i = 0; i < count; i ++) {
         let firstName = response.data[i].profile.first_name;
         let lastName = response.data[i].profile.last_name;
         let name = response.data[i].practices[0].name;
