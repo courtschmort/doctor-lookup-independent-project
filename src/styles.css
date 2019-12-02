@@ -33,6 +33,7 @@ h6 {
   box-shadow: 4px 4px 4px #96B4E8;
   padding: 2rem;
   padding-bottom: 1rem;
+  border: 1px solid #ced4da;
   border-radius: .3rem;
   margin-bottom: 1rem;
 }
