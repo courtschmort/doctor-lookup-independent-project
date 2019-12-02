@@ -1,15 +1,54 @@
 #result, #results {
   display: none;
+  padding: 2rem;
+}
+
+.list {
+  padding: 2rem;
 }
 
 body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 300;
   margin-top: 5rem;
+  background-color: rgb(232, 240, 254);
 }
 
-.btn-primary {
+h1 {
+  font-family: 'Calistoga', cursive;
+  font-size: 3.75rem;
+  color: #343a40;
   margin-bottom: 1rem;
 }
 
+h6 {
+  font-family: 'Calistoga', cursive;
+  font-size: 2.5rem;
+  color: #343a40;
+}
+
+.box {
+  background-color: #fff;
+  box-shadow: 4px 4px 4px #96B4E8;
+  padding: 2rem;
+  padding-bottom: 1rem;
+  border-radius: .3rem;
+  margin-bottom: 1rem;
+}
+
+.form-control-lg {
+  font-weight: 300;
+}
+
+.btn-primary {
+  margin: 1rem 0;
+}
+
 .count {
-  font-weight: 500;
+  font-weight: 600;
+}
+
+.new {
+  font-weight: 600;
 }
